@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- 本项目顶层-->
+	<groupId>com.flare</groupId>
+	<artifactId>flare</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>flare</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<junit.version>4.11</junit.version>
+		<webmagic.version>0.7.3</webmagic.version>
+		<log4j.version>2.6.2</log4j.version>
+		<slf4j.version>1.7.21</slf4j.version>
+		<elasticsearch.version>5.0.1</elasticsearch.version>
+		<guava.version>15.0</guava.version>
+		<!-- plugin -->
+		<plugin.surefire.version>2.20</plugin.surefire.version>
+		<plugin.compiler.version>3.6.1</plugin.compiler.version>
+		<plugin.dependency.version>3.0.0</plugin.dependency.version>
+		<plugin.resources.version>3.0.2</plugin.resources.version>
+		<plugin.jar.version>3.0.2</plugin.jar.version>
+		<plugin.source.version>3.0.1</plugin.source.version>
+		<plugin.javadoc.version>2.10.4</plugin.javadoc.version>
+		<plugin.release.version>2.5.3</plugin.release.version>
+		<plugin.gpg.version>1.6</plugin.gpg.version>
+	</properties>
+
+	<developers>
+		<developer>
+			<id>mark-wk</id>
+			<name>wangkui</name>
+			<email>mark.wangkui@qq.com</email>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:git@github.com:mark-wk/flare.git</connection>
+		<developerConnection>scm:git:git@github.com:mark-wk/flare.git</developerConnection>
+		<url>git@github.com/mark-wk/flare.git</url>
+		<tag>HEAD</tag>
+	</scm>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>us.codecraft</groupId>
+				<artifactId>webmagic-core</artifactId>
+				<version>${webmagic.version}</version>
+				<!--exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions-->
+			</dependency>
+			<dependency>
+				<groupId>us.codecraft</groupId>
+				<artifactId>webmagic-extension</artifactId>
+				<version>${webmagic.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.elasticsearch.client</groupId>
+				<artifactId>transport</artifactId>
+				<version>${elasticsearch.version}</version>
+			</dependency>
+			<!-- log -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-to-slf4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
