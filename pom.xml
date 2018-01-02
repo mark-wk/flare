@@ -15,6 +15,7 @@
 		<module>flare-common</module>
 		<module>flare-wechat</module>
 		<module>flare-web</module>
+		<module>flare-repository</module>
 	</modules>
 	<packaging>pom</packaging>
 	<name>flare</name>
