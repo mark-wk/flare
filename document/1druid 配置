@@ -1,0 +1,2 @@
+加密密码命令
+java -cp druid-1.1.6.jar com.alibaba.druid.filter.config.ConfigTools password

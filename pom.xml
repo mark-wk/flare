@@ -16,7 +16,8 @@
 		<module>flare-wechat</module>
 		<module>flare-web</module>
 		<module>flare-repository</module>
-	</modules>
+        <module>flare-facade</module>
+    </modules>
 	<packaging>pom</packaging>
 	<name>flare</name>
 
@@ -27,13 +28,18 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<junit.version>4.11</junit.version>
 		<webmagic.version>0.7.3</webmagic.version>
-		<log4j.version>2.6.2</log4j.version>
-		<slf4j.version>1.7.21</slf4j.version>
-		<elasticsearch.version>5.0.1</elasticsearch.version>
-		<guava.version>15.0</guava.version>
 		<mybatis.version>1.3.1</mybatis.version>
 		<pagehelper.version>1.2.3</pagehelper.version>
-
+		<druid-version>1.1.6</druid-version>
+		<javamelody.version>1.70.0</javamelody.version>
+		<itext.version>2.1.7</itext.version>
+		<spring-beans-version>4.3.13.RELEASE</spring-beans-version>
+		<spring-context-version>4.3.13.RELEASE</spring-context-version>
+		<commons-lang3-version>3.5</commons-lang3-version>
+		<fastjson.version>1.2.41</fastjson.version>
+		<spring-tx-version>4.3.13.RELEASE</spring-tx-version>
+		<jackson-dataformat-version>2.8.10</jackson-dataformat-version>
+		<swagger2.version>2.6.1</swagger2.version>
 		<!-- plugin -->
 		<plugin.compiler.version>3.6.1</plugin.compiler.version>
 	</properties>
@@ -66,16 +72,47 @@
 				<version>${pagehelper.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid-spring-boot-starter</artifactId>
+				<version>${druid-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring-beans-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring-context-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>${junit.version}</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
-				<groupId>com.google.guava</groupId>
-				<artifactId>guava</artifactId>
-				<version>${guava.version}</version>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring-tx-version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.dataformat</groupId>
+				<artifactId>jackson-dataformat-yaml</artifactId>
+				<version>${jackson-dataformat-version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>us.codecraft</groupId>
 				<artifactId>webmagic-core</artifactId>
@@ -92,27 +129,27 @@
 				<artifactId>webmagic-extension</artifactId>
 				<version>${webmagic.version}</version>
 			</dependency>
-
 			<dependency>
-				<groupId>org.elasticsearch.client</groupId>
-				<artifactId>transport</artifactId>
-				<version>${elasticsearch.version}</version>
+				<groupId>net.bull.javamelody</groupId>
+				<artifactId>javamelody-spring-boot-starter</artifactId>
+				<version>${javamelody.version}</version>
 			</dependency>
-			<!-- log -->
+			<!-- itext, option to add PDF export -->
 			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-to-slf4j</artifactId>
-				<version>${log4j.version}</version>
+				<groupId>com.lowagie</groupId>
+				<artifactId>itext</artifactId>
+				<version>${itext.version}</version>
+			</dependency>
+			<!-- swagger2 依赖-->
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${swagger2.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-log4j12</artifactId>
-				<version>${slf4j.version}</version>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${swagger2.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
