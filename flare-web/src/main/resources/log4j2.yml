@@ -10,7 +10,7 @@ Configuration:
       - name: log.level.com.flare
         value: trace
       - name: log.path
-        value: target/logger
+        value: /Users/wangkui/data/logs
       - name: project.name
         value: spring
 
