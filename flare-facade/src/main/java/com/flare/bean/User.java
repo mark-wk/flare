@@ -1,4 +1,4 @@
-package com.flare.model;
+package com.flare.bean;
 
 import java.util.Date;
 

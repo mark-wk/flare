@@ -1,6 +1,6 @@
 package com.flare.mapper;
 
-import com.flare.model.User;
+import com.flare.bean.User;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Long testId);
